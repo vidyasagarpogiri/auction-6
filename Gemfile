@@ -23,6 +23,8 @@ gem 'pry'
 gem 'hirb'
 
 group :test do
+  gem 'minitest-rails'
+  gem 'minitest-reporters'
   gem 'database_cleaner'
   gem 'timecop'
   gem 'pry-byebug'

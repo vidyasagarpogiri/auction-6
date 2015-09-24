@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :products do
-    resources :auctions, only: [:create]
+    resources :auctions, only: [:create] do
+      resources :bids, only: [:create]
+    end
   end
   root 'products#index'
 end
