@@ -11,4 +11,8 @@ class Auction < ActiveRecord::Base
     top_bid.nil? ? value : top_bid.value
   end
 
+  def ended?
+    ends_at < Time.now
+  end
+
 end
